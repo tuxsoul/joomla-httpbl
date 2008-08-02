@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall version="1.0.0" type="mambot" group="system">
+	<name>Joomla-Http:BL</name>
+	<author>Mario Oyorzabal Salgado</author>
+	<creationDate>February 2008</creationDate>
+	<copyright>(C) 2008 Mario Oyorzabal Salgado, All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU/GPL v2.0</license>
+	<authorEmail>tuxsoul@tuxsoul.com</authorEmail>
+	<authorUrl>http://code.google.com/p/joomla-httpbl/</authorUrl>
+	<version>0.1</version>
+
+	<description><![CDATA[  
+		<h3>A Joomla mambot implement the API from Project Honey Pot.</h3>
+		<h3>
+			<p align="justify">
+			Overview
+			<br />
+			For many years email recipients have benefited from the use of various DNSBLs in the fight against 
+			spam. Through efficient DNS lookups, mail servers are able to check individual connecting clients 
+			against various black lists. This provides mail servers with the ability to decide to how client 
+			requests are handled from hosts based on individual black list criteria. Hosts are able to decide to 
+			block requests, allow requests, or perform extra spam filtering scrutiny to messages from hosts based 
+			on results from black lists lookups.
+			<br />
+			Http:BL is similar, but is designed for web traffic rather than mail traffic. The data provided 
+			through the service allows website administrators to choose what traffic is allowed onto their sites.
+			<br /><br />
+			You need one key to access Project Honey Pot, please register. <br />
+			<br />
+			More information: <br />
+			<a target="_blank" href="http://www.projecthoneypot.org?rf=39586">http://www.projecthoneypot.org?rf=39586</a>
+			</p>
+
+			<p>
+			Please consider donate first to Project Honey Pot: <br />
+			<a target="_blank" href="http://www.projecthoneypot.org/donate.php">http://www.projecthoneypot.org/donate.php</a>
+			</p>
+
+			<p>
+			After you can consider donate to this mambot ;-) : <br />
+			<div align="center">
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="cmd" value="_donations">
+				<input type="hidden" name="business" value="tuxsoul@tuxsoul.com">
+				<input type="hidden" name="item_name" value="Joomla-Http:BL">
+				<input type="hidden" name="no_shipping" value="1">
+				<input type="hidden" name="no_note" value="1">
+				<input type="hidden" name="currency_code" value="USD">
+				<input type="hidden" name="tax" value="0">
+				<input type="hidden" name="lc" value="MX">
+				<input type="hidden" name="bn" value="PP-DonationsBF">
+				<input type="image" src="https://www.paypal.com/es_XC/i/btn/x-click-butcc-donate.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+				<img alt="" border="0" src="https://www.paypal.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+				</form>
+			</div>
+		</h3>
+		<br />
+	]]></description>
+
+	<files>
+		<filename mambot="joomla_httpbl">joomla_httpbl.php</filename>
+	</files>
+	
+	<params>
+		<param name="httpbl_key" type="text" size="12" default="" label="Key Access" description="Key to Access Http:BL this have 12 characters." />
+		<param name="httpbl_quicklink" type="text" size="50" default="" label="Quicklink" description="Quicklink from Project Honey Pot, or url trap." />
+		<param name="httpbl_days" type="text" size="3" default="14" label="Last Activity Days" description="Represents the number of days since last activity from this suspicious IP." />
+		<param name="httpbl_test" type="radio" default="0" label="Test" description="If you enable this when visit your site this will be redirect to quicklink, but if not redirect work the key is incorrect or something is wrong." >
+			<option value="1">Enable</option>
+			<option value="0">Disable</option>
+		</param>
+	</params>
+</mosinstall>
